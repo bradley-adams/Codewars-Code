@@ -1,4 +1,5 @@
-One: Format a string of names like 'Bart, Lisa & Maggie'.
+// One: Format a string of names like 'Bart, Lisa & Maggie'.
+
 function list(names){
   let answer = ''
   
@@ -12,4 +13,4 @@ function list(names){
   return answer
 }
 
-Two:
+// Two:
