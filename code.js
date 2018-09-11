@@ -1,5 +1,4 @@
 // One: Format a string of names like 'Bart, Lisa & Maggie'.
-
 function list(names){
   let answer = ''
   
@@ -34,3 +33,20 @@ function validBraces(braces){
     }
     return (comparison.length == 0)
   }
+
+  // Three: Printer Errors
+  function printerError(s) {
+    s.split(' ')
+    let bl = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    let count = 0
+    let slength = s.length
+    let bllength = bl.length
+    for (let i = 0; i < slength; i++) {
+      for (let j = 0; j < bllength; j++){
+        if ( s[i] === bl[j]){
+        count++
+        }
+      }
+      }
+      return count + '/' + slength
+    }
