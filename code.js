@@ -72,3 +72,8 @@ function disemvowel(str) {
   }
   }
   }
+
+// Five: WeIrD StRiNg CaSe (Genius but not mine. Harrison in on this)
+const toWeirdCase = string => string.split(' ').map(word => word.split('').map((char, i) => i % 2 == 0 ? char.toUpperCase() : char.toLowerCase()).join('')).join(' ')
+
+//Six: Sort the odd
