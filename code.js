@@ -55,8 +55,8 @@ function printerError(s) {
 
 // Four: Disemvowel Trolls
 function disemvowel(str) {
-  return str =  str.replace(/a|e|i|o|u/gi, "")
-  }
+  return str = str.replace(/a|e|i|o|u/gi, "")
+}
 
 function disemvowel(str) {
   str.split(' ')
@@ -64,16 +64,36 @@ function disemvowel(str) {
   let slength = str.length
   let vlength = vowels.length
   console.log(str)
-  for (let i = 0; i < slength; i++){
-    for (let j = 0; j < vlength; j++){
-      if (str[i] == vowels[j]){
+  for (let i = 0; i < slength; i++) {
+    for (let j = 0; j < vlength; j++) {
+      if (str[i] == vowels[j]) {
         delete str[i]
       }
+    }
   }
-  }
-  }
+}
 
 // Five: WeIrD StRiNg CaSe (Genius but not mine. Harrison in on this)
 const toWeirdCase = string => string.split(' ').map(word => word.split('').map((char, i) => i % 2 == 0 ? char.toUpperCase() : char.toLowerCase()).join('')).join(' ')
 
-//Six: Sort the odd
+//Six: Detect Pangram
+//6 looping
+function isPangram(string) {
+  let str = string.toLowerCase()
+  let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  let count = 0
+  let slength = str.length
+  let alphalength = alpha.length
+  for (let i = 0; i < slength; i++) {
+    for (let j = 0; j < alphalength; j++) {
+      if (str[i] === alpha[j]) {
+        alpha.splice(j, 1) && count++
+      }
+    }
+  }
+  if (count == 26) {
+    return true
+  } else return false
+}
+
+  //6 filter/find
